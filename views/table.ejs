@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(let i =0; i < friendsList.length; i++) { %>
+      <tr>
+        <th scope="row"><%= i + 1 %></th>
+        <td><%= friendsList[i].name %></td>
+        <td><%= friendsList[i].age %></td>
+        <td><a href="">@<%= friendsList[i].handle %></a></td>
+        <form action="/edit/<%= friendsList[i].id %>" method="get">
+          <td><button type="submit" class="btn btn-secondary">Edit</button></td>
+        </form>
+        <td>
+          <form action="/delete/<%= friendsList[i].id %>" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

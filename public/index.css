@@ -1,0 +1,24 @@
+.friends__table {
+    width: 50%;
+    margin: auto;
+}
+
+.create__friend{
+    position: absolute;
+    left: 25%;
+}
+
+.friends__form {
+    width: 40%;
+    margin: auto;
+}
+
+.about__container{
+    height: 100vh;    
+    width: 100%;
+    text-align: center;
+}
+
+.about__text{
+    margin-top: 5%;
+}
